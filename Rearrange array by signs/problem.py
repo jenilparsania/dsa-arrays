@@ -19,23 +19,23 @@ The positive integers in nums are [3,1,2]. The negative integers are [-2,-5,-4].
 The only possible way to rearrange them such that they satisfy all conditions is [3,-2,1,-5,2,-4].
 Other ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditions.
 """
-
+# Brute Force
 def reArrangeArr(nums):
-    nums1 = []
-    nums2 = []
+    pos = []
+    neg = []
     ans = []
 
     for i in nums:
         if i>0:
-            nums1.append(i)
+            pos.append(i)
         else:
-            nums2.append(i)
+            neg.append(i)
     
-    for i in range(0,len(nums1)):
-        ans.append(nums1[i])
-        ans.append(nums2[i])
+    for i in range(0,len(pos)):
+        nums[2*i]=pos[i]
+        nums[2*i+1] = neg[i]
     
-    return ans
+    return nums
    
 
 arr = [3,1,-2,-5,2,-4]
