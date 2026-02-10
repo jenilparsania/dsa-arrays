@@ -11,17 +11,18 @@ Explanation: Subarrays with sum = 15 are [5, 2, 7, 1], [10, 5] and [10, 5, 2, 7,
 def LongestSubArray(nums:list,target:int)->int:
 
     n = len(nums)
-    add = 0
     ans = 0
     for i in range(0,n):
-        for j in range(i+1,n):
-            if add < target:
-                add += nums[i] + nums[j]
-            elif add == target:
-                ans = max(ans,j-i+1)
-            elif add > target:
-                add = 0
-                break
+        
+        for j in range(i,n):
+            add = 0
+            for k in range(i,j+1):
+                add += nums[k]
+                if add == target:
+                    ans = max(ans,j-i+1)
+
+
+                
 
     return ans
     pass
