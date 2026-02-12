@@ -22,8 +22,6 @@ def LongestSubArray(nums:list,target:int)->int:
                     ans = max(ans,j-i+1)
 
 
-                
-
     return ans
     pass
 

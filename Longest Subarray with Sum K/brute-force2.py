@@ -9,6 +9,7 @@ def LongestSubArray(nums:list,target:int)->int:
             add += nums[j]
             if add == target:
                 length = max(length,j-i+1)
+                
    
     return length
     pass
