@@ -20,10 +20,10 @@ Output: 23
 Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
  
 """
-
-def KadaneAlgo(nums:list):
+# TC -> O(N(N+1)/2) approx equals to O(N^2)
+def maxSum(nums:list):
     n = len(nums)
-    maxi = float("-inf")
+    maxi = float("-inf") # very important, not to take this as 0, because an array may have all the negative elements in it.
     total = 0
     i = 0 
     j = 0
@@ -37,4 +37,4 @@ def KadaneAlgo(nums:list):
     pass
 
 nums = [-2,1,-3,4,-1,2,1,-5,4]
-print(KadaneAlgo(nums))
+print(maxSum(nums))
