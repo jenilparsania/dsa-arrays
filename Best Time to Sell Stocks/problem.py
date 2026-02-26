@@ -21,20 +21,16 @@ Sample Output 1 :
 5
 """
 
-def SellStocks(nums:list):
-    n = len(nums)
-    maxi = float("-inf")
-    difference = float("-inf")
-    for i in range(n):
-        
-        for j in range(i+1,n):
-            difference = nums[j] - nums[i]
-            # print(f"{nums[j]} - {nums[i]} = {difference}")
-            maxi = max(maxi,difference)
+def SellStocks(prices:list):
+    maxPro = 0
+    n = len(prices)
 
-    if maxi < 0: maxi = 0  
-    
-    return maxi
+    for i in range(n):
+        for j in range(i + 1, n):
+            if prices[j] > prices[i]:
+                maxPro = max(prices[j] - prices[i], maxPro)
+
+    return maxPro
     pass
 
 nums =[7 ,1 ,5, 4 ,3, 6]
