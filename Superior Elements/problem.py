@@ -29,13 +29,13 @@ def MajorityElement(nums:list):
     for i in range(n):
         flag = True
         for j in range(i+1,n):
-            print(f"{a[i]} < {a[j]}")
+            # print(f"{a[i]} < {a[j]}")
             
             if a[i] < a[j]:
                 flag = False
         
         if flag:
-            print(f"{i} => {a[i]} ; {j} => {a[j]}")
+            # print(f"{i} => {a[i]} ; {j} => {a[j]}")
             answer.append(a[i])
         
     return answer
