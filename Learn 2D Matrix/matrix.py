@@ -12,4 +12,5 @@ rows = len(nums)
 cols = len(nums[0])
 for i in range(0,rows):
     for j in range(0,cols):
-        print(nums[i][j])
+        print(nums[i][j],end=" ")
+    print()
