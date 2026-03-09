@@ -1,18 +1,18 @@
 """
-5   10  8
-    6   3
-        9
+5   *  *
+7    6   *
+2    1    9
 
 
 """
 
 nums = [[5,20,3],[7,-10,9],[1,-52,6]]
-row = len(nums)
+rows = len(nums)
 cols = len(nums[0])
 
-for i in range(0,row):
-    for j in range(0,cols):
-        if j>=i:
+for i in range(rows):
+    for j in range(cols):
+        if j<=i:
             print(nums[i][j],end=" ")
         else:
             print(" * ",end=" ")
