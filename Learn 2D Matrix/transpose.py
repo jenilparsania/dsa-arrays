@@ -7,7 +7,7 @@ interchanging of rows and columns in a matrix
 
 
 """
-nums = [[5,9,1],[2,3,7]]
+nums = [[5,9,1],[2,3,6],[12,13,45]]
 rows = len(nums)
 cols = len(nums[0])
 result = [[0]*rows for _ in range(cols)]
